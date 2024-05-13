@@ -5,7 +5,7 @@ function Main(){
     return (
     <div className="main">
         <div>
-            <h1>From Our Gallary</h1>
+            <h1>Featured Artwork</h1>
         </div>
          
   
