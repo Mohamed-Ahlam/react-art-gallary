@@ -2,9 +2,6 @@ import React from "react";
 
 function Feature(){
 
-    // paragraph
-    //image
-
     return(
         <div className="feature">
             <div className="featureText">

@@ -1,15 +1,8 @@
 import React from "react";
 
-function ArtPage(props){
+function ArtPage(){
 
-    return null
-        /* 
-        takes image object 
-
-        and renders image object
-        
-        */
-
+return null
 }
 
-return ArtPage;
+export default ArtPage;

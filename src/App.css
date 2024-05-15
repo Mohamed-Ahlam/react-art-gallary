@@ -138,12 +138,15 @@ li a:hover:not(.active) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color:rgb(112, 4, 4);
+  font-size: larger;
+  font-weight:600;
   /* justify-content: space-between;
   align-items: end; */
 }
 
 .feature img{
-  border:6px solid rgb(84, 84, 84);
+  border:6px solid rgb(112, 4, 4);
 }
 
                                      /* main bar */
@@ -169,6 +172,8 @@ li a:hover:not(.active) {
   /* padding: 20px; */
   margin: 20px;
   border-bottom: solid;
+  color: rgb(112, 4, 4);
+  font-size: 35px;
  
   /* width: 100%; */
   /* align-self: flex-start;
@@ -224,32 +229,69 @@ li a:hover:not(.active) {
   align-items: center; */
 }
 
+/* TRYING IT OUT */
 
 
-/* 
-image 
-- u hover over a image it shows 
-
-OBJ{
-image
-artist name 
-art name 
+.imgContainer {
+  position: relative;
+  /* width: 50%; */
 }
 
-view more ->
+.image {
+  /* display: block; */
+  width: 100%;
+  height: auto;
+}
 
-*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(112, 4, 4);
+}
 
+.imgContainer:hover .overlay {
+  opacity: 1;
+}
 
+.title {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
-/* 
-
-page - but page is 
-
-- maybe 
-
-component
-component
-component
-
-*/
+.artist {
+  color: white;
+  font-size: 100%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text {
+  color: white;
+  font-size: 100%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
