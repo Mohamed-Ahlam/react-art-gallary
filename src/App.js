@@ -50,8 +50,7 @@ function App() {
       {"id": 2,"img":"images/usgs-Eu2uXqoHenE-unsplash.jpg", "title":"Title", "artist":"name"},
       {"id": 3,"img":"images/birmingham-museums-trust-Dux4iugPayo-unsplash.jpg", "title":"Title", "artist":"name"},
       {"id": 4,"img":"images/simon-champagne-9nXws2I_kgo-unsplash.jpg", "title":"Title", "artist":"name"},
-      {"id": 5,"img":"images/pexels-steve-1145720.jpg", "title":"Title", "artist":"name"},
-
+      {"id": 5,"img":"images/pexels-steve-1145720.jpg", "title":"Title", "artist":"name"}
     ]
 
   return (
@@ -77,3 +76,12 @@ function App() {
 
 export default App;
 library.add(fab, fas, far)
+
+
+/*
+
+want to click on a pic, pic sends data to ARTPAGE
+
+ARTPAGE shows data
+
+*/
