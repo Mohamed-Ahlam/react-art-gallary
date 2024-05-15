@@ -5,14 +5,12 @@
 /* u NEED ALL 3  */
 }
 
-.header{
+/* sets up the page is 100vh */
 
+
+.heroPage{
   width: 100%;
-  height: 100vh;  /* targets 100% of the screen*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;  /* targets 100% of ANY screen ur looking at */
 
   border: 2px solid red;
   background-image: url("https://media.timeout.com/images/105963997/image.jpg");
@@ -20,28 +18,63 @@
   background-position: center;
   background-size: cover;
   backdrop-filter: blur(5px);
+}
 
+/* is the flexbox item */
+.hero{
+  /* min-height: 50%; sets the minimum height of an element */
+  /* min-height: 100%;
+  min-width: 100%;   */
+  /* use 100% width and height so flex box can take over the whole page */
+  display: flex;
+  row-gap: 10em;  /* u need this to give spacing to flex items WHEN THEY ARE IN "flex-direction:column"*/
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.child:nth-child(1){
+  /* flex: 1 1 auto; */
+}
+
+.child:nth-child(2){
+  /* flex: 1 1 auto;   do this so this flex item can take up page space */
 
 }
 
-
+                          /* hero text - a flex item of hero */
 .heroText{
-  display: block;
-  text-align: center;
+  border: 2px solid pink;
+
+  display: flex;
+  /* text-align: center; */
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+
   font-weight: bold;
   font-size:20px;
-
   /* transparent text bg */
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1;
   width: 50%;
   padding: 20px;
+  /* height: 30px; */
 
 }
 
 
-/* nav bar */
+
+                          /* nav bar - a flex item of hero */
+
+/* .navBar{
+  align-self: start;
+  justify-items: start;
+  gap: 50%;
+} */
 ul {
   list-style-type: none;
   margin: 0;
@@ -53,7 +86,7 @@ ul {
 }
 
 li {
-  float: left;
+  /* float: left; */
   /* width: 100%;
   height: 100%; */
 }
@@ -67,8 +100,8 @@ li a {
 
 
     /* transparent text bg */
-   
-    padding: 20px;
+/*    
+    padding: 20px; */
 }
 
 li a:hover:not(.active) {
@@ -79,24 +112,67 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 } */
 
-.section{
-  align-self: flex-end;
-  justify-self: start;
+
+                                     /* feature section */
+
+.featurePage{
+  height: 60vh;
+  border:2px solid rgb(84, 84, 84);
+  
+  background-color: rgb(253, 243, 232);
+}
+.feature{
+  /* 100% is about taking 100% height of what the parent size was */
+  min-height: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 10em;
+
+
+  color:2px solid rgb(84, 84, 84);
 }
 
+.featureText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content: space-between;
+  align-items: end; */
+}
+
+.feature img{
+  border:6px solid rgb(84, 84, 84);
+}
+
+                                     /* main bar */
 .main{
   /* width: 100%; */
   height: 100vh;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   background-color: bisque;
 }
 
+
+/* trying to make main header stretch the whole page - FAILED */
+/* .mainHeader{
+  flex-grow: 1;
+  flex-basis: auto;
+  border: 2px solid blue;
+} */
+
 .main h1{
-  padding: 20px;
-  padding-bottom: 10px;
+  /* padding: 20px; */
+  margin: 20px;
+  border-bottom: solid;
+ 
+  /* width: 100%; */
+  /* align-self: flex-start;
+  align-content: start; */
 }
 
 /* pain */
@@ -147,3 +223,33 @@ li a:hover:not(.active) {
   /* justify-content: space-around;
   align-items: center; */
 }
+
+
+
+/* 
+image 
+- u hover over a image it shows 
+
+OBJ{
+image
+artist name 
+art name 
+}
+
+view more ->
+
+*/
+
+
+
+/* 
+
+page - but page is 
+
+- maybe 
+
+component
+component
+component
+
+*/

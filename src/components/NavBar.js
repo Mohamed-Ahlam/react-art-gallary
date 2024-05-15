@@ -3,7 +3,7 @@ import React from "react";
 function NavBar(){
 
     return (
-    <div className="section">
+    <>
         <nav>
         <ul >
             <li><a href="#home">Home</a></li>
@@ -12,7 +12,7 @@ function NavBar(){
             <li style={{float:"right"}}><a class="active" href="#about">About</a></li>
         </ul>
         </nav>
-    </div>
+    </>
     )
 }
 

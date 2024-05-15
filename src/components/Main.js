@@ -4,8 +4,8 @@ function Main(){
 
     return (
     <div className="main">
-        <div>
-            <h1>Featured Artwork</h1>
+        <div className="mainHeader">
+            <h1>The Art Gallary</h1>
         </div>
          
   
