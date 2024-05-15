@@ -2,7 +2,11 @@ import React from "react";
 
 function ArtPage(){
 
-return null
+return (
+    <>
+    <h1>IN ART PAGE</h1>
+    </>
+)
 }
 
 export default ArtPage;

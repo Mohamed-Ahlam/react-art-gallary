@@ -1,8 +1,8 @@
 import './App.css';
-import Header from "./components/Header"
-import Main from './components/Main';
-import Feature from './components/Feature';
+
 import ArtPage from './components/ArtPage'
+
+import HomePage from './components/HomePage';
 
 
 // import the icon library
@@ -13,6 +13,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 
+// import router
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 
 function App() {
 
@@ -22,7 +25,6 @@ function App() {
       {"id": 3,"img":"images/steve-johnson-8JURfedRyWg-unsplash.jpg", "title":"Title", "artist":"name"},
       {"id": 4,"img":"images/europeana-ryiQ0NISRJ4-unsplash.jpg", "title":"Title", "artist":"name"},
       {"id": 5,"img":"images/vojtech-bruzek-zMl9PjGFPWg-unsplash.jpg", "title":"Title", "artist":"name"}
-
     ]
 
     const listTwo = [
@@ -53,23 +55,23 @@ function App() {
     ]
 
   return (
+    <Router>
     <div >
      
      
-        <div className="heroPage">
-          <Header/>
-        </div>
+        
 
-        <div className="featurePage">
-          <Feature/>
-        </div>
-
-        <div >
-          <Main listOne={listOne} listTwo={listTwo} listThree={listThree} listFour={listFour}/>
-        </div>
+        <Routes>
+          {/* <Switch> */}
+            <Route path='/' exact element={<HomePage listOne={listOne} listTwo={listTwo} listThree={listThree} listFour={listFour} />}/>
+            <Route path='/artpage' element={<ArtPage/>}/>
+          {/* </Switch> */}
+          
+        </Routes>
 
 
     </div>
+    </Router>
   );
 }
 

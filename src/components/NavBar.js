@@ -1,15 +1,29 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 
 function NavBar(){
+
+    const navStyle = {
+        color: 'white'
+    }
 
     return (
     <>
         <nav>
         <ul >
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li style={{float:"right"}}><a class="active" href="#about">About</a></li>
+            <Link to="/" style={navStyle}>
+                <li>Home</li>
+            </Link>
+            <Link to="/" style={navStyle}>
+                <li>News</li>
+            </Link>
+            <Link to="/" style={navStyle}>
+                <li>Contact</li>
+            </Link>
+            <Link to="/" style={{float:"right", color: "white"}}>
+                <li>About</li>
+            </Link>
         </ul>
         </nav>
     </>
