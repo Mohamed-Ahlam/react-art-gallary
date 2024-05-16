@@ -1,25 +1,43 @@
 import React from "react";
-
-function ArtPage(){
-
-    // const {showArt} = props
-
-    // const item = showArt;
+import { useParams } from 'react-router-dom';
+import {useState} from "react"; 
 
 
+
+
+function ArtPage(props){
+
+    const {listOne , listTwo, listThree, listFour} = props;
+
+    const { artworkId } = useParams(); // gets the number at the end url (which was the id of the item that i put in)
+    let art = null;
+// look thro each list to find the obj using url id
+    if ((listOne.find(a => a.id === parseInt(artworkId)))) {
+        art = listOne.find(a => a.id === parseInt(artworkId))
+      }
+    else if ((listTwo.find(a => a.id === parseInt(artworkId)))) {
+        art = listTwo.find(a => a.id === parseInt(artworkId))
+    }
+    else if ((listThree.find(a => a.id === parseInt(artworkId)))) {
+        art = listThree.find(a => a.id === parseInt(artworkId))
+    }
+    else if ((listFour.find(a => a.id === parseInt(artworkId)))) {
+        art = listFour.find(a => a.id === parseInt(artworkId))
+    }
+    else{
+        return <div>Artwork not found!</div>;
+    }
+    
+        // 
     return(
         <div className="artpage">
             <div className="artText">
-                    <h2>ART TITLE</h2>
-                    <p>
-                    <blockquote>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit laoreet id donec. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Augue lacus viverra vitae congue eu. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Nunc id cursus metus aliquam eleifend. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Volutpat sed cras ornare arcu dui vivamus arcu felis. Pharetra et ultrices neque ornare. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Diam quam nulla porttitor massa id neque aliquam. Urna neque viverra justo nec ultrices dui sapien eget mi. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Lorem sed risus ultricies tristique nulla aliquet. Orci dapibus ultrices in iaculis. Risus pretium quam vulputate dignissim suspendisse in est ante in.
-                    </blockquote>  
-                    </p>
+                    <h2>{art.title}</h2>
+                    <p>{art.artist}</p>
             </div>
 
             <div className="artImg">
-            <img src="images/europeana-88w2yI5A78Y-unsplash.jpg" alt=""  style={{width:"450px", height:"350px"}}></img>
+                <img src={art.img} alt=""  style={{width:"550px", height:"450px"}}></img>
             </div>
 
         </div>

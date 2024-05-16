@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 function Feature(props){
     const {featureArt} = props
@@ -8,11 +10,11 @@ function Feature(props){
                     <h2>Featured Image</h2>
                     <p>
                     <blockquote>
-                        This is our featured image of the week. We allow users to come <br />together and choose  an art and the art favoured by many will<br /> be featured on our main page.
+                        This is our featured image section. We allow users <br />to choose the art favoured by them to be featured<br /> on our main page.
                     </blockquote>  
                     </p>
                     
-                    <p>View the featured art</p>
+                    <p>View the featured art <FontAwesomeIcon icon="fa-solid fa-arrow-right fa-xs" /></p>
             </div>
 
             <div className="featureChild">
