@@ -2,18 +2,20 @@ import React from "react";
 
 function ArtPage(){
 
-    // const {item} = props
+    // const {showArt} = props
+
+    // const item = showArt;
+
+
     return(
         <div className="artpage">
             <div className="artText">
-                    <h2>Featured Image</h2>
+                    <h2>ART TITLE</h2>
                     <p>
                     <blockquote>
-                        This is our featured image of the week. We allow users to come <br />together and choose  an art and the art favoured by many will<br /> be featured on our main page.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit laoreet id donec. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Augue lacus viverra vitae congue eu. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Nunc id cursus metus aliquam eleifend. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Volutpat sed cras ornare arcu dui vivamus arcu felis. Pharetra et ultrices neque ornare. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Diam quam nulla porttitor massa id neque aliquam. Urna neque viverra justo nec ultrices dui sapien eget mi. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Lorem sed risus ultricies tristique nulla aliquet. Orci dapibus ultrices in iaculis. Risus pretium quam vulputate dignissim suspendisse in est ante in.
                     </blockquote>  
                     </p>
-                    
-                    <p>View the featured art</p>
             </div>
 
             <div className="artImg">

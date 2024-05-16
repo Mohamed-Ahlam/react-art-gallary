@@ -1,7 +1,7 @@
 import React from "react";
 
-function Feature(){
-
+function Feature(props){
+    const {featureArt} = props
     return(
         <div className="feature">
             <div className="featureText">
@@ -16,7 +16,9 @@ function Feature(){
             </div>
 
             <div className="featureChild">
-            <img src="images/birmingham-museums-trust-GwLByeMDHOU-unsplash.jpg" alt=""  style={{width:"450px", height:"350px"}}></img>
+            {/* <img src="images/birmingham-museums-trust-GwLByeMDHOU-unsplash.jpg" alt=""  style={{width:"450px", height:"350px"}}></img> */}
+            <img src={featureArt.img} alt=""  style={{width:"450px", height:"350px"}}></img>
+
             </div>
         </div>
     )
