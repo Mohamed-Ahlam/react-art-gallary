@@ -10,7 +10,7 @@ function Feature(props){
                     <h2>Featured Image</h2>
                     <p>
                     <blockquote>
-                        This is our featured image section. We allow users <br />to choose the art favoured by them to be featured<br /> on our main page.
+                        This is our featured art section. We allow users <br />to choose the art favoured by them to be featured<br /> on our main page.
                     </blockquote>  
                     </p>
                     
