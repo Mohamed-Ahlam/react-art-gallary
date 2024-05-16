@@ -18,15 +18,17 @@ function Image(props){
   
 
     return(
-        <div className="imgContainer">
+        <div className="imgContainer"  key={item.id}>
             <img src={item.img} alt="" className="image" style={{width:"100%"}}></img>
             <div class="overlay">
                 <div class="title">{item.title}</div>
                 <div class="artist">{item.artist}</div>
 
-                <Link to='/artpage'> 
-                {/* <div class="text"><a onClick={() => {showArt(item)}}>To view art info <FontAwesomeIcon icon="fa-solid fa-arrow-right fa-xs" /></a></div> */}
-                <div class="text"><a onClick={() => {addFeatureArt(item)}}>To view art info <FontAwesomeIcon icon="fa-solid fa-arrow-right fa-xs" /></a></div>
+                 
+                <div class="makeFeature"><a onClick={() => {addFeatureArt(item)}}>To Make Feature <FontAwesomeIcon icon="fa-solid fa-heart fa-xs" /></a></div>
+        
+                <Link to={`/artpage/${item.id}`}> 
+                <div class="viewArt"><a>To view art info <FontAwesomeIcon icon="fa-solid fa-arrow-right fa-xs" /></a></div>
                 </Link>
 
 
