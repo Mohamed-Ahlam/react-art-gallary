@@ -3,7 +3,8 @@ import Image from "./Image";
 
 function Main(props){
 
-    const{listOne, listTwo, listThree, listFour} = props;
+    // const{listOne, listTwo, listThree, listFour, showArt} = props;
+    const{listOne, listTwo, listThree, listFour, addFeatureArt} = props;
 
     return (
     <div className="main">
@@ -14,16 +15,18 @@ function Main(props){
          
         <div className="row"> 
         <div className="column">
-        {listOne.map((item) => <Image item={item}/>)}
+        {/* {listOne.map((item) => <Image item={item} />)} */}
+        {listOne.map((item) => <Image item={item} addFeatureArt={addFeatureArt}/>)}
+
         </div>
         <div className="column">
-        {listTwo.map((item) => <Image item={item}/>)}
+        {listTwo.map((item) => <Image item={item} addFeatureArt={addFeatureArt}/>)}
         </div>
         <div className="column">
-        {listThree.map((item) => <Image item={item}/>)}
+        {listThree.map((item) => <Image item={item} addFeatureArt={addFeatureArt}/>)}
         </div>
         <div className="column">
-        {listFour.map((item) => <Image item={item}/>)}
+        {listFour.map((item) => <Image item={item} addFeatureArt={addFeatureArt}/>)}
         </div>
         </div>
 
